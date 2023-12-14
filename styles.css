@@ -1,0 +1,410 @@
+/********f************
+    
+	Final Project  Javascript
+	Name: Monica Lopez
+	Date: December 13, 2023
+	Description: Final project Web Development 2.
+
+*********************/
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    background-color: black;
+}
+
+#navHeader {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    height: 50px;
+    z-index: 1000;
+}
+
+#navHeader ul {
+    list-style: none;
+    text-align: center;
+    padding-top: 10px;
+    margin: 0;
+}
+
+#navHeader ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+#navHeader ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+#navHeader ul li a:hover {
+    color: yellowgreen;
+}
+
+/* Main content */
+.content {
+    padding: 20px;
+}
+
+#firstTitle{
+    position: absolute;
+    top: 80px; 
+    left: 20px; 
+    color: black; 
+    font-size: 36px; 
+    z-index: 1;  
+    text-decoration: underline;
+}
+
+#pHome{
+    padding-top: 10px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.green-text{
+    font-weight: bold;
+    color: black;
+}
+
+section {
+    margin-bottom: 50px; 
+    padding-top: 100px; 
+    padding-bottom: 50px; 
+}
+
+h2{
+    padding-bottom: 30px;
+}
+
+/* Home section */
+#home {
+    text-align: center;
+    margin-top: -20px; /* Adjust as needed */
+}
+
+#divImgHome {
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    margin-top: -20px; /* Adjust as needed */
+}
+
+#divImgHome img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#imgServices{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+#imgServices td {
+    padding: 5px; 
+    font-weight: bold;
+}
+
+#imgServices img {
+    width: 70px; 
+    height: 70px; 
+}
+
+/* About section */
+#about {
+    text-align: center;
+}
+
+#divAbout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px; /* Padding adjusted */
+}
+
+#divAbout img {
+    max-width: 450px; 
+    height: auto; 
+    margin-right: 20px; 
+}
+
+#pAbout {
+    text-align: left;
+    max-width: calc(50% - 470px); /* Adjusted maximum width for the paragraph */
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+/* Works Gallery section */
+#WorksGallery {
+    text-align: center; 
+    margin-top: 20px; 
+}
+
+#imgContainer {
+    display: inline-block; /* Make the container shrink to fit the content */
+}
+
+#imgGallery {
+    border-collapse: collapse; /* Remove space between table cells */
+}
+
+#imgGallery td {
+    border: 1px solid gray; 
+    padding: 10px; 
+}
+
+#imgGallery img {
+    width: 150px; 
+    height: 150px; 
+}
+
+/* Contact section */
+#contact {
+    text-align: center;
+    width: 100%;
+}
+
+fieldset {
+    width: 400px;
+    margin: 0 auto;
+    font-size: 12px;
+    padding: 20px;
+    border: 1px solid #ccc; 
+}
+
+fieldset div.left {
+    text-align: left;
+}
+
+fieldset ul {
+    list-style: none;
+    padding: 0;
+}
+
+fieldset ul li {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    text-align: left;
+}
+
+input[type="text"],
+textarea {
+    width: calc(100% - 12px); 
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+button[type="submit"],
+button[type="reset"] {
+    width: calc(100% - 12px); 
+    box-sizing: border-box;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+/* Footer */
+.content {
+    padding: 20px;
+    margin-bottom: 90px; 
+}
+
+#footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 9px;
+    font-weight: bold;
+    height: 40px;
+    line-height: 30px; 
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 50px;
+}
+
+#footer ul {
+    padding: 0;
+    margin: 0;
+}
+
+#footer ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+#footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#footer ul li a:hover {
+    text-decoration: underline;
+}
+
+#fullname_error,
+#phone_error,
+#phoneformat_error,
+#email_error,
+#emailformat_error,
+#comments_error{
+    color: red;
+}
+
+#successMessage{
+    color: blue;
+}
+
+/* Media Queries for Responsive Design */
+@media only screen and (max-width: 600px) {
+    /* Hamburger menu */
+    #navHeader ul {
+        display: none; 
+        background-color: black; 
+        padding: 10px 0; 
+    }
+
+    #navHeader ul li {
+        display: block; 
+        margin: 10px 0; 
+    }
+
+    #navHeader ul li a {
+        color: white; 
+        display: block; 
+        padding: 10px; 
+        text-decoration: none; 
+    }
+
+    #menuBtn {
+        display: block; 
+        background-color: black; 
+        color: white; 
+        border: none; 
+        padding: 10px; 
+        font-size: 20px; 
+        cursor: pointer; 
+    }
+
+    /* Adjustments for home section */
+
+    #firstTitle{
+        position: absolute;
+        top: 50px; 
+        left: 20px; 
+        color: black; 
+        font-size: 30px; 
+        z-index: 1;  
+        text-decoration: underline;
+    }
+
+    #pHome{
+        padding-top: 20px;
+        font-size: 24px;
+    }
+
+    #divImgHome {
+        height: auto; 
+        margin-top: 0; 
+    }
+
+    #divImgHome img {
+        width: 100%;
+    }
+
+    #imgServices {
+        width: 90%; 
+        margin: 10px auto; 
+        padding-top: 15px;
+    }
+    
+    #imgServices td {
+        padding: 2px; 
+        font-size: 13px;
+    }
+
+    /* Adjustments for about section */
+    
+    #about {
+        padding-top: 50px;
+    }
+
+    /* Center the h2 */
+    #about h2 {
+        text-align: center;
+    }
+
+    /* Center the image */
+    #divAbout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjust image width */
+    #divAbout img {
+        width: 80%; 
+        max-width: 300px; 
+        margin-right: 0; 
+    }
+
+    /* Center the paragraph text */
+    #pAbout {
+        text-align: center;
+        max-width: 80%; 
+        margin: 20px auto; 
+        font-size: 16px;
+    }
+    
+     /* Center the content horizontally */
+     #WorksGallery {
+        text-align: center;
+    }
+
+    /* Modify table layout for smaller screens */
+    #imgGallery {
+        display: block; 
+        margin: 0 auto; 
+    }
+
+    /* Adjust each table cell (td) containing images */
+    #imgGallery td {
+        display: block; 
+        margin-bottom: 20px; 
+        text-align: center; 
+    }
+
+    /* Resize images to 250x250 */
+    #imgGallery img {
+        width: 250px; 
+        height: 250px; 
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    #menuBtn {
+        display: none; /* Hide the hamburger button on larger screens */
+    }
+}

@@ -1,0 +1,150 @@
+<!-- 
+    
+	Final Project  Javascript
+	Name: Monica Lopez
+	Date: December 13, 2023
+	Description: Final project Web Development 2. 
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ellen Brown Graphic Designer</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="scripts.js"></script>
+    <script src="js/formValidate.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+         <!-- Navigation menu -->
+        <nav id="navHeader">
+            <button id="menuBtn">&#9776;</button> 
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#WorksGallery">Works Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>       
+    </header>
+
+    <!-- Main content -->
+    <div class="content">
+        <!-- Home section -->
+        <section id="home">
+            <h1 id="firstTitle">Ellen Brown</h1>
+            <div id="divImgHome">
+                <img src="images/imageHeader.jpg" alt="Header image">
+            </div>            
+            <p id="pHome">FREELANCER GRAPHIC DESIGNER</p>
+            <table id="imgServices">
+                <tr>
+                  <td><img src="images/brand-identity.png" alt=" Branding Service"></td>
+                  <td><img src="images/social-media.png" alt="Social Media Service"></td>
+                  <td><img src="images/video-editor.png" alt="Video Editing Service"></td>
+                </tr>
+                <tr>
+                    <td>Branding</td>
+                    <td>Social Media Graphics</td>
+                    <td>Video editing</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- About section -->
+        <section id="about">
+            <h2>About</h2>
+            <div id="divAbout">
+                <img src="images/EllenBrown.jpg" alt="Ellen Brown photograpy">
+                <p id="pAbout">Hello! I'm Ellen Brown, a Winnipeg-based graphic designer and 
+                    a La Salle graduate. Fueled by coffee and a relentless pursuit of learning, 
+                    I thrive on creative problem-solving, witnessing projects take flight, and 
+                    crafting designs for both digital and print platforms. <br><br>My expertise spans 
+                    <span class="green-text">marketing, social media, video editing, branding, 
+                    and image manipulation.</span> 
+                </p>  
+            </div>  
+        </section>
+
+        <!-- Works Gallery section -->
+        <section id="WorksGallery">
+            <h2>Works Gallery</h2>
+            <div id="imgContainer">
+                <table id="imgGallery">
+                    <tr>
+                        <td><img src="images/image1.jpg" alt="Example Project 1"></td>
+                        <td><img src="images/image2.jpg" alt="Example Project 2"></td>
+                        <td><img src="images/image3.jpg" alt="Example Project 3"></td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/image4.jpg" alt="Example Project 4"></td>
+                        <td><img src="images/image5.jpg" alt="Example Project 5"></td>
+                        <td><img src="images/image6.jpg" alt="Example Project 6"></td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/image7.jpg" alt="Example Project 7"></td>
+                        <td><img src="images/image8.jpg" alt="Example Project 8"></td>
+                        <td><img src="images/image9.jpg" alt="Example Project 9"></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- Contact section -->
+        <section id="contact">
+            <h2>Contact me</h2><br>
+            <form id="contactForm"  action="#">
+                <fieldset>
+                    <div class="left">
+                        <h3>Contact Information</h3>
+                        <ul>
+                            <li>
+                                <label for="fullname">Full Name</label>
+                                <input id="fullname" name="fullname" type="text">
+                                <p class="contactError error" id="fullname_error">* Required field</p>
+                            </li>
+                            <li>
+                                <label for="phone">Phone Number</label>
+                                <input id="phone" name="phone" type="text">
+                                <p class="contactError error" id="phone_error">* Required field</p>
+                                <p class="contactError error" id="phoneformat_error">* Required a numeric value </p>
+                            </li>
+                            <li>
+                                <label for="email">Email</label>
+                                <input id="email" name="email" type="text">
+                                <p class="contactError error" id="email_error">* Required field</p>
+                                <p class="contactError error" id="emailformat_error">* Invalid email address </p>
+                            </li>
+                            <li>
+                                <label for="comments">Comments</label><br>
+                                <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+                                <p class="contactError error" id="comments_error">* Required field </p> <br>
+                            </li>
+                            <li>
+                                <button type="submit" id="submit"> Submit </button>
+                                <button type="reset" id="clear"> Clear Form </button>
+                            </li>
+                        </ul>
+                    </div>
+                </fieldset>
+            </form>
+            <p id="successMessage" style="display: none;">Your form has been submitted successfully!</p>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <nav id="navFooter">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#WorksGallery">Works Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+   </footer>
+
+</body>
+</html>
